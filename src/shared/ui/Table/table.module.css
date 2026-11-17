@@ -1,0 +1,77 @@
+.wrapper {
+  @apply relative w-full h-full overflow-auto;
+}
+
+.primary {
+  @apply bg-bg-secondary border-bg-secondary;
+
+  .head-cell, .cell, .pinned-cell-content {
+    @apply bg-bg-default;
+  }
+}
+
+.secondary {
+  @apply bg-bg-default border-bg-default;
+
+  .head-cell, .cell, .pinned-cell-content {
+    @apply bg-bg-secondary;
+  }
+}
+
+.table {
+  @apply w-full bg-inherit border-inherit;
+}
+
+.thead {
+  @apply bg-inherit sticky top-0 z-30; 
+
+  &:after {
+    content: '';
+    position: absolute;
+    background: inherit;
+    width: 100%;
+    height: 0.875rem;
+    top: 2.5rem;
+    display: block;
+  }
+}
+
+.tbody {
+  &:not(:first-child):before {
+    content: '';
+    height: 0.75rem;
+    display: block;
+  }
+  
+  @apply bg-inherit border-inherit;
+}
+
+.head-cell {
+  @apply
+    select-none
+    h-10
+    py-2.5
+    text-start
+    text-text-secondary
+    text-sm
+    font-normal
+    leading-4
+    shadow-[#EDEDED_0px_1px]
+    whitespace-nowrap;
+}
+
+.cell {
+  @apply align-top py-2.5 text-start text-text-default;
+}
+
+.pinned-cell {
+  @apply p-0 min-w-4 w-4 sticky bg-inherit; 
+}
+
+.pinned-cell-content {
+  @apply absolute w-full top-0 bottom-0;
+}
+
+.row {
+  @apply bg-inherit border-y-2 border-inherit;
+}

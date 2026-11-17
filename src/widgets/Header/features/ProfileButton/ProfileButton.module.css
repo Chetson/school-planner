@@ -1,0 +1,10 @@
+.button {
+  @apply 
+    max-w-64
+    w-full
+    flex 
+    !pl-1.5 
+    !pr-3 
+    !justify-between
+    text-text-default
+}

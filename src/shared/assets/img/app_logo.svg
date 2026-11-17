@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 48" fill="none" role="img" aria-label="School Planner">
+  <rect x="0" y="8" width="32" height="32" rx="8" fill="#2563EB"/>
+  <rect x="8" y="17" width="16" height="2.5" rx="1.25" fill="#FFFFFF"/>
+  <rect x="8" y="23" width="16" height="2.5" rx="1.25" fill="#FFFFFF" opacity="0.75"/>
+  <rect x="8" y="29" width="10" height="2.5" rx="1.25" fill="#FFFFFF" opacity="0.5"/>
+  <text x="44" y="31" fill="#E5E7EB" font-family="system-ui, -apple-system, Segoe UI, Roboto, sans-serif" font-size="18" font-weight="600">School Planner</text>
+</svg>

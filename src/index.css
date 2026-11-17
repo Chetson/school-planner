@@ -1,0 +1,143 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: 'Golos Text';
+    font-style: normal;
+    font-weight: 500;
+    src: url('src/shared/assets/fonts/GolosText-Medium.woff2') format('woff2'),
+          url('src/shared/assets/fonts/GolosText-Medium.ttf') format('ttf');
+  }
+
+  @font-face {
+    font-family: 'Golos Text';
+    font-style: normal;
+    font-weight: 600;
+    src: url('src/shared/assets/fonts/GolosText-DemiBold.woff2') format('woff2'),
+          url('src/shared/assets/fonts/GolosText-DemiBold.ttf') format('ttf');
+  }
+
+  @font-face {
+    font-family: 'Golos Text';
+    font-style: normal;
+    font-weight: 900;
+    src: url('src/shared/assets/fonts/GolosText-Black.woff2') format('woff2'),
+          url('src/shared/assets/fonts/GolosText-Black.ttf') format('ttf');
+  }
+
+  @font-face {
+    font-family: 'Golos Text';
+    font-weight: bold;
+    font-style: normal;
+    src: url('src/shared/assets/fonts/GolosText-Bold.woff2') format('woff2'),
+          url('src/shared/assets/fonts/GolosText-Bold.ttf') format('ttf');
+  }
+
+  @font-face {
+    font-family: 'Golos Text';
+    font-weight: normal;
+    font-style: normal;
+    src: url('src/shared/assets/fonts/GolosText-Regular.woff2') format('woff2'),
+          url('src/shared/assets/fonts/GolosText-Regular.ttf') format('ttf');
+  }
+
+  html {
+    font-family: "Golos Text", sans-serif;
+  }
+}
+
+body {
+  line-height: 1.5;
+  font-weight: 400;
+  margin: 0;
+
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+
+  overflow-x: hidden;
+}
+
+:root {
+  --scrollbar-background-color: #F2F2F2;
+  --scrollbar-thumb-color: #B4B8BA;
+  --scrollbar-size: 0.25rem;
+  --scrollbar-thumb-radius: 2.5rem;
+}
+
+body,
+html,
+#root {
+  height: 100%;
+}
+
+html {
+  @-moz-document url-prefix() {
+    scrollbar-width: var(--scrollbar-size);
+    scrollbar-color: var(--scrollbar-thumb-color) var(--scrollbar-background-color);
+  }
+
+  ::-webkit-scrollbar {
+    background-color: var(--scrollbar-background-color);
+    width: var(--scrollbar-size);
+    height: var(--scrollbar-size);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: var(--scrollbar-thumb-color);
+    border-radius: var(--scrollbar-thumb-radius);
+  }
+
+  ::-webkit-scrollbar-corner {
+    background-color: var(--scrollbar-background-color);
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+ol,
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+ul,
+ol,
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-weight: 400;
+}
+
+input,
+button {
+  outline: none;
+}
+
+a {
+  text-decoration: none;
+}

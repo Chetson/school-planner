@@ -1,0 +1,10 @@
+.popover {
+  @apply
+    z-50
+    py-2.5
+    overflow-hidden
+    rounded-2xl 
+    bg-bg-default 
+    shadow-md
+    outline-none;
+}

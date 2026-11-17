@@ -1,0 +1,48 @@
+.container {
+  @apply
+    h-13
+    box-border 
+    w-full 
+    flex 
+    items-center
+    relative 
+    border 
+    rounded-2xl 
+}
+
+.input {
+  @apply
+    box-border 
+    grow
+    w-20
+    h-full 
+    text-sm 
+    disabled:text-text-disable 
+    bg-inherit
+    placeholder:text-text-secondary 
+    disabled:placeholder:text-text-disable
+    focus:outline-none;
+
+  &:-webkit-autofill,
+  &:-webkit-autofill:hover,
+  &:-webkit-autofill:focus {
+    background-color: transparent !important;
+    color: inherit !important;
+    -webkit-box-shadow: 0 0 0px 1000px white inset !important;
+  }
+}
+
+.label {
+  @apply  
+    absolute 
+    transition-all 
+    duration-150 
+    rounded-full 
+    text-text-secondary 
+    px-1 
+    left-4 
+    cursor-default 
+    bg-bg-default 
+    -top-2.5 
+    text-xs
+}

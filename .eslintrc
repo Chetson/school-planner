@@ -1,0 +1,137 @@
+{
+  "ignorePatterns": ["node_modules/", "global.d.ts"],  
+  "root": true,
+  "plugins": [
+    "react", 
+    "import",
+    "@typescript-eslint"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "extends": [
+    "eslint-config-prettier",
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+
+    "plugin:react/recommended",
+    "plugin:react-hooks/recommended",
+
+    "plugin:import/typescript",
+
+    "plugin:storybook/recommended"
+  ],
+  "env": {
+    "node": true
+  },
+
+  "settings": {
+    "react": {
+      "version": "detect"
+    },
+    "import/resolver": {
+      "typescript": true,
+      "node": true
+    },
+    "import/extensions": [
+      ".js",
+      ".jsx",
+      ".ts",
+      ".tsx"
+    ]
+  },
+
+  "overrides": [{
+    "files": ["*.js", "*.jsx", "*.ts", "*.tsx"],
+    "rules": {
+      // Запрет всех выводов в консоль кроме console.error()
+      "no-console": ["error", { "allow": ["error"] }],
+      "react/react-in-jsx-scope": "off",
+      "react/jsx-filename-extension": [1, { "extensions": [".jsx", ".tsx"] }],
+      "react/boolean-prop-naming": [
+        "error",
+        { "rule": "^(is|has|with)[A-Z]([A-Za-z0-9]?)+" }
+      ],
+
+      /** Запрет импортов */
+      "no-restricted-imports": [
+        "error",
+        {
+          "patterns": [
+            {
+              "group": ["@*/*/*/*", "../*/*/"]
+            }
+          ],
+          "paths": [
+            {
+              "name": "react",
+              "importNames": ["default"]
+            }
+          ]
+        }
+      ],
+
+      "@typescript-eslint/no-unused-vars": [
+        "error",
+        {
+          "vars": "all",
+          "args": "after-used",
+          "ignoreRestSiblings": true,
+          "argsIgnorePattern": "^_"
+        }
+      ],
+      "import/order": [
+        "error",
+        {
+          "groups": [
+            "builtin",
+            "external",
+            "internal",
+            ["sibling", "parent"],
+            "index",
+            "type"
+          ],
+          "pathGroups": [
+            {
+              "pattern": "react",
+              "group": "external",
+              "position": "before"
+            }
+          ],
+          "pathGroupsExcludedImportTypes": ["react", "type"],
+          "newlines-between": "always",
+          "alphabetize": {
+            "order": "asc",
+            "caseInsensitive": true
+          }
+        }
+      ],
+
+      /** Вынужденный отступ перед return */
+      "padding-line-between-statements": [
+        "error",
+        { "blankLine": "always", "prev": "*", "next": "return" }
+      ],
+      "@typescript-eslint/consistent-type-imports": [
+        "error",
+        { "fixStyle": "separate-type-imports" }
+      ],
+
+      /** Разрешаем только import type { Type } from 'module' */
+      "import/consistent-type-specifier-style": [
+        "error",
+        "prefer-top-level"
+      ],
+
+      "@typescript-eslint/naming-convention": [
+        "error",
+        {
+          "selector": "enum",
+          "format": ["PascalCase"]
+        },
+        {
+          "selector": "enumMember",
+          "format": ["UPPER_CASE"]
+        }
+      ]
+    }
+  }]
+}

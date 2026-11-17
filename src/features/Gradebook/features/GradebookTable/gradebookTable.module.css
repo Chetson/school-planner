@@ -1,0 +1,50 @@
+.wrapper {
+  @apply relative w-full h-full overflow-auto bg-bg-secondary;
+
+  --scrollbar-size: 0.45rem;
+
+  @-moz-document url-prefix() {
+    scrollbar-width: var(--scrollbar-size);
+  }
+
+  &::-webkit-scrollbar {
+    width: var(--scrollbar-size);
+    height: var(--scrollbar-size);
+  }
+}
+
+.table {
+  @apply w-full bg-inherit border-separate table-auto mt-[-0.125rem] mx-[-0.125rem];
+}
+
+.thead {
+  @apply bg-inherit sticky top-0 z-50;
+}
+
+.tbody {
+  @apply bg-inherit;
+}
+
+:global(.trow:has(#ACTIVE_CELL)) :global(.tbody-cell-content *) {
+  @apply bg-decorative-light-green;
+}
+
+.thead-cell {
+  @apply p-0 h-7 text-start text-text-secondary leading-4 bg-inherit;
+}
+
+.tbody-cell {
+  @apply bg-inherit p-0 overflow-hidden box-border;
+}
+
+.tbody-cell-content {
+  @apply overflow-hidden h-12 w-full;
+}
+
+.pinned-left {
+  @apply sticky left-0 z-40 bg-inherit pr-1 w-32;
+}
+
+.pinned-right {
+  @apply sticky right-0 z-40 bg-inherit pl-1 w-14;
+}

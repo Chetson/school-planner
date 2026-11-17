@@ -1,0 +1,20 @@
+.wrapper {
+  @apply
+    w-4
+    h-4
+    border
+    border-solid
+    border-stroke-default
+    rounded-[50%]
+    overflow-hidden
+    relative
+}
+
+.flag {
+  @apply
+    absolute 
+    left-1/2 
+    top-1/2 
+    translate-x-[-50%] 
+    translate-y-[-50%] 
+}

@@ -1,0 +1,3 @@
+.range-end > button {
+  @apply bg-inherit text-text-default;
+}

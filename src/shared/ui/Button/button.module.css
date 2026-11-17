@@ -1,0 +1,23 @@
+.primary {
+  @apply bg-button-primary-default text-text-default-inverted hover:bg-button-primary-hover focus:bg-button-primary-tap disabled:bg-button-primary-disable;
+}
+
+.secondary {
+  @apply bg-button-secondary-default text-text-secondary-inverted hover:bg-button-secondary-hover focus:bg-button-secondary-tap disabled:bg-button-primary-disable;
+}
+
+.tertiary {
+  @apply bg-button-tertiary-default text-text-default hover:bg-button-tertiary-hover focus:text-text-default-inverted focus:bg-button-tertiary-tap disabled:bg-button-primary-disable disabled:text-text-default-inverted;
+}
+
+.destructive {
+  @apply bg-button-distructive-default text-text-secondary-inverted hover:bg-button-distructive-hover focus:bg-button-distructive-tap disabled:bg-button-primary-disable;
+}
+
+.link {
+  @apply bg-transparent text-button-primary-default hover:text-button-primary-hover focus:text-button-primary-tap disabled:text-button-primary-disable;
+}
+
+.blank {
+  @apply bg-bg-default text-decorative-gray disabled:text-button-primary-disable;
+}

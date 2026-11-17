@@ -1,0 +1,7 @@
+.selected-day > button {
+  @apply bg-decorative-blue text-text-default-inverted rounded;
+}
+
+.range-middle > button {
+  @apply bg-inherit text-text-default !important;
+}
